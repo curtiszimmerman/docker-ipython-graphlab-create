@@ -40,7 +40,7 @@ RUN conda install ipython-notebook
 # upgrade GraphLab Create with GPU Acceleration
 RUN pip install --upgrade --no-cache-dir http://static.dato.com/files/graphlab-create-gpu/graphlab-create-1.8.5.gpu.tar.gz
 
-# expose tcp/8888
-EXPOSE 8888
+# expose tcp/8888 and tcp/12000
+EXPOSE 8888 12000
 # and set our container's run command (remember Docker likes 0.0.0.0 to listen on all interfaces!)
 CMD jupyter notebook --ip=0.0.0.0
