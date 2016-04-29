@@ -7,7 +7,7 @@ MAINTAINER curtiszimmerman <software@curtisz.com>
 RUN apt-get update -y && \
 	apt-get install -y \
 		curl \
-		git && \
+		python-qt4 && \
 	rm -rf /var/cache/apt/archive/*
 
 # get more things we need (and do it on one layer so our unionfs doesn't store the 400mb file in one of its layers)
