@@ -30,7 +30,7 @@ RUN conda update pip
 ## install graphlab create with creds provided in --build-arg in 'docker build' command (in build.sh):
 ARG USER_EMAIL
 ARG USER_KEY
-RUN pip install --upgrade --no-cache-dir https://get.dato.com/GraphLab-Create/1.9/${USER_EMAIL}/${USER_KEY}/GraphLab-Create-License.tar.gz
+RUN pip install --upgrade --no-cache-dir https://get.dato.com/GraphLab-Create/1.10.1/${USER_EMAIL}/${USER_KEY}/GraphLab-Create-License.tar.gz
 
 ## install ipython and ipython notebook
 RUN conda install ipython-notebook
@@ -38,7 +38,7 @@ RUN conda install ipython-notebook
 ## NVIDIA GPU ACCELERATION IS NOT AS EASY AS YOU THINK (but still possible)
 # see: https://github.com/NVIDIA/nvidia-docker/wiki/Using%20nvidia-docker-plugin
 # upgrade GraphLab Create with GPU Acceleration
-RUN pip install --upgrade --no-cache-dir http://static.dato.com/files/graphlab-create-gpu/graphlab-create-1.9.gpu.tar.gz
+RUN pip install --upgrade --no-cache-dir http://static.dato.com/files/graphlab-create-gpu/graphlab-create-1.10.1.gpu.tar.gz
 
 # and set our container's run command
 CMD jupyter notebook
