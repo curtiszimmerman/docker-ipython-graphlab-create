@@ -41,4 +41,4 @@ RUN conda install ipython-notebook
 RUN pip install --upgrade --no-cache-dir http://static.dato.com/files/graphlab-create-gpu/graphlab-create-1.10.1.gpu.tar.gz
 
 # and set our container's run command
-CMD jupyter notebook
+CMD ["jupyter", "notebook", "--ip=0.0.0.0"]
