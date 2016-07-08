@@ -1,6 +1,6 @@
 
 
-FROM ubuntu:14.04
+FROM krallin/ubuntu-tini:trusty
 MAINTAINER curtiszimmerman <software@curtisz.com>
 
 # get the things we need
